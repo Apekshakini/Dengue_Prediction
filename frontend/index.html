@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dengue Outbreak Analysis</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Dengue Analysis</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="container mt-5 pt-5">
+        <h2>Home</h2>
+        <p>Select a file to upload dengue data and analyze outbreak patterns by Taluk.</p>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="fileUpload">Upload Dataset:</label>
+                <input type="file" class="form-control-file" id="fileUpload" accept=".csv">
+            </div>
+            <div class="form-group">
+                <label for="talukSelect">Select Taluk:</label>
+                <select class="form-control" id="talukSelect">
+                    <option value="BANTWALA">BANTWALA</option>
+                    <option value="BELTHANGADY">BELTHANGADY</option>
+                    <option value="MANGALORE RURAL">MANGALORE RURAL</option>
+                    <option value="MANGALORE URBAN">MANGALORE URBAN</option>
+                    <option value="PUTTUR">PUTTUR</option>
+                    <option value="SULLIA">SULLIA</option>
+                </select>
+            </div>
+            <button id="analyzeButton" class="btn btn-primary mt-3">Analyze</button>
+        </form>
+    </section>
+
+    <!-- Chart Display -->
+    <section id="results" class="container mt-5">
+        <h2>Results</h2>
+        <div id="charts">
+            <!-- Yearly and Monthly charts will be rendered here dynamically -->
+        </div>
+        <div id="villageHeatmap">
+            <!-- Village heatmap will be rendered here dynamically -->
+        </div>
+    </section>
+    <section id="demographicAnalysis" class="container mt-5">
+        <h2>Demographic Analysis</h2>
+        <div id="ageGenderDistribution">
+            <!-- Age and Gender charts will be rendered here dynamically -->
+        </div>
+        <div id="detectionDelayAnalysis">
+            <!-- Detection Delay vs Severity charts will be rendered here dynamically -->
+        </div>
+    </section>
+
+
+    <!-- jQuery and JavaScript files -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="frontend.js"></script>
+</body>
+</html>
